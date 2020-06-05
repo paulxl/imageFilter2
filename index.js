@@ -12,7 +12,7 @@ const blue = document.getElementById("blue");
 const brightness = document.getElementById("brightness");
 const grayscale = document.getElementById("grayscale");
 const contrast = document.getElementById("contrast");
-const saveMenu = document.getElementById("dropdownMenu");
+
 const R_OFFSET = 0;
 const G_OFFSET = 1;
 const B_OFFSET = 2;
@@ -33,22 +33,7 @@ function clamp(value) {
     return Math.max(0, Math.min(Math.floor(value), 255));
 }
 
-/*function runPipeline() {
-    // Get each input value
 
-    for (let i = 0; i < srcImage.height; i++) {
-        for (let j = 0; j < srcImage.width; j++) {
-            // apply grayscale to pixel (j,i) if checked
-            // apply brightness to pixel (j,i) according to selected value
-            // apply contrast to pixel (j,i) according to selected value
-            // apply red to pixel (j,i) according to selected value
-            // apply green to pixel (j, i) according to selected value
-            // apply blue to pixel (j, i) according to selected value
-        }
-    }
-    // draw updated image
-}
-*/
 function addBlue(x, y, value) {
     const index = getIndex(x, y) + B_OFFSET;
     const currentValue = currentPixels[index];
@@ -159,9 +144,9 @@ srcImage.onload = function() {
     imgData = ctx.getImageData(0, 0, srcImage.width, srcImage.height);
     originalPixels = imgData.data.slice();
 };
-// red.onchange = runPipeline;
-// green.onchange = runPipeline;
-// blue.onchange = runPipeline;
-// brightness.onchange = runPipeline;
-// grayscale.onchange = runPipeline;
-// contrast.onchange = runPipeline;
+red.onchange = runPipeline;
+green.onchange = runPipeline;
+blue.onchange = runPipeline;
+brightness.onchange = runPipeline;
+grayscale.onchange = runPipeline;
+contrast.onchange = runPipeline;

@@ -14,10 +14,16 @@
 
 <body>
     <h1>Simple Photo Editor</h1>
-    <input type="file" accept='image/*' id='fileinput' />
     <br>
-    <a>Select A Photo To Work With</a><br><br>
-    <div id="inputsAndCanvas">
+    <hgroup id="hgroup1">
+
+        <h3 id="instructions">Select A Photo To Work With </h3>
+        <input type="file" accept='image/*' id='fileinput' />
+    </hgroup>
+    <a><em>If You Want To Save After Altering Picture</em><a>
+    <a><em>Click Right On Picture and Save to Disk</em></a>
+    <br><br>
+    <div id="inputs">
 
         <div id="slideBars">
             <form id="options">
@@ -41,26 +47,19 @@
                     <label for='contrast'>CONTRAST</label>
                     <input type="range" min='-255' max='255' value='0' id='contrast'>
                 </div>
-                <div class="checkbox">
-                    <label for='grayscale'>GRAYSCALE</label>
+                <div class="barsAndNames">
+                    <label for='grayscale' id='grayscaleLabel'>GRAYSCALE</label>
                     <input type='checkbox' id='grayscale' name="grayscale">
                 </div>
-                <div class="dropdown">
-                    <button class="dropBtn" type="button" data-toggle="dropdown" id="dropdownMenu">Save Image</button>
-                    <div class="dropdownContent">
-                        <a href="">NO</a>
-                        <a href="">YES</a>
-                    </div>
-
-                </div>
-                <br/>
             </form>
         </div>
-        <div id="photoSpot">
-            <canvas id='canvas' width="100%" height="auto"></canvas>
 
-        </div>
     </div>
+    <div>
+        <canvas id='canvas' width="100%" height="auto"></canvas>
+
+    </div>
+
     <script src="index.js"></script>
 </body>
 
