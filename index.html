@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Simple Photo Editor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Simple Photo Editor</h1>
+    <input type="file" accept='image/*' id='fileinput' />
+    <br>
+    <a>Select A Photo To Work With</a><br><br>
+    <div id="inputsAndCanvas">
+
+        <div id="slideBars">
+            <form id="options">
+                <div class="barsAndNames">
+                    <label for='red'>RED</label>
+                    <input type="range" min='-255' max='255' value='0' id='red'>
+                </div>
+                <div class="barsAndNames">
+                    <label for='green'>GREEN</label>
+                    <input type="range" min='-255' max='255' value='0' id='green'>
+                </div>
+                <div class="barsAndNames">
+                    <label for='blue'>BLUE</label>
+                    <input type="range" min='-255' max='255' value='0' id='blue'>
+                </div>
+                <div class="barsAndNames">
+                    <label for='brightness'>BRIGHTNESS</label>
+                    <input type="range" min='-255' max='255' value='0' id='brightness'>
+                </div>
+                <div class="barsAndNames">
+                    <label for='contrast'>CONTRAST</label>
+                    <input type="range" min='-255' max='255' value='0' id='contrast'>
+                </div>
+                <div class="checkbox">
+                    <label for='grayscale'>GRAYSCALE</label>
+                    <input type='checkbox' id='grayscale' name="grayscale">
+                </div>
+                <div class="dropdown">
+                    <button class="dropBtn" type="button" data-toggle="dropdown" id="dropdownMenu">Save Image</button>
+                    <div class="dropdownContent">
+                        <a href="">NO</a>
+                        <a href="">YES</a>
+                    </div>
+
+                </div>
+                <br/>
+            </form>
+        </div>
+        <div id="photoSpot">
+            <canvas id='canvas' width="100%" height="auto"></canvas>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

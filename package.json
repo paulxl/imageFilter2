@@ -1,0 +1,16 @@
+{
+    "name": "imagefilter2",
+    "version": "1.0.0",
+    "description": "photo editor",
+    "main": "index.js",
+    "scripts": {
+        "start": "index.html --open"
+    },
+    "keywords": [
+        "photo",
+        "filter",
+        "image"
+    ],
+    "author": "paulxl",
+    "license": "MIT"
+}
